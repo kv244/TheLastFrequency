@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Last Frequency</title>
+<meta name="description" content="A signal has been transmitting since before the first star. You were always going to find it.">
+<meta property="og:title" content="The Last Frequency">
+<meta property="og:description" content="An interactive story in ten chapters.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#050403">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Share+Tech+Mono&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div id="loading">
+  <img id="loading-bg" src="" alt="">
+  <div id="loading-vignette"></div>
+  <div id="loading-gradient"></div>
+  <div id="loading-content">
+    <div id="loading-title">The Last Frequency</div>
+    <div id="loading-rule"></div>
+    <div id="loading-sub">A story in ten chapters</div>
+    <div id="loading-tagline">
+      The signal has been transmitting<br>
+      since before the first star.<br>
+      You were always going to find it.
+    </div>
+    <div id="loading-bar-wrap"><div id="loading-bar"></div></div>
+    <div id="loading-status"></div>
+  </div>
+</div>
+
+<div id="tt"></div>
+<div id="grain"></div><div id="vignette"></div><div id="overlay"></div>
+<div id="fl"></div><div id="ab"></div>
+
+<div id="ch-card">
+  <div id="ch-inner">
+    <div id="ch-num"></div><div id="ch-name"></div><div id="ch-sub"></div>
+    <div id="ch-threads"></div>
+    <button id="ch-btn" onclick="dismissChCard()">Begin &#8594;</button>
+  </div>
+</div>
+
+<div id="top"><span id="st">The Last Frequency</span><span id="cc">I &middot; 1 / 60</span></div>
+<div id="ch-badge">Chapter I &mdash; The First</div>
+<div id="tl"></div>
+<div id="audio-bar">
+  <input id="vol-slider" type="range" min="0" max="1" step="0.05" value="0.8" oninput="onVolChange(parseFloat(this.value))">
+  <button id="mute-btn" onclick="toggleMute()">&#9834; on</button>
+</div>
+<div id="sc"><canvas id="c"></canvas></div>
+<div id="stage">
+  <div id="content"><div id="bt"></div><div class="div"></div><div id="bx"></div></div>
+  <div id="ctrl">
+    <button class="btn" onclick="nav(-1)">&#8592; Prev</button>
+    <div id="pg"></div>
+    <button class="btn" onclick="nav(1)">Next &#8594;</button>
+  </div>
+</div>
+
+
+<script src="js/data.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/canvas.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
