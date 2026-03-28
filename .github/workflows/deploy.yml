@@ -30,6 +30,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Minify JS
+        run: |
+          npm install -g terser
+          for file in js/*.js; do
+            terser "$file" -o "$file" --compress --mangle
+          done
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
